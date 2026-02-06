@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="../assets/bootstrap/bootstrap.min.css"rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    color: RGB(7,99,97);
+}
+
+.bg-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    /* background: rgb(7,99,97); */
+color: RGB(7,99,97);
+background: linear-gradient(90deg, rgba(7, 99, 97, 1) 0%, rgba(7, 85, 99, 1) 52%, rgba(0, 0, 0, 1) 100%);     
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 6%;
+}
+
+.container {
+    display: flex;
+    gap: 60px;
+    max-width: 1700px;
+    margin:auto ;
+    margin-top: 80px;
+}
+
+.image-slot {
+    flex: 1;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.image-slot img {
+    width: 100%;
+    height: 100%;
+     border-radius: 10px;
+     /* margin-top:; */
+     
+}
+
+
+.text-slot {
+    flex: 2;
+    background: rgba(255,255,255,0.08);
+    padding: 45px;
+    border-radius: 25px;
+    border: 2px solid rgba(255,255,255,0.4);
+}
+
+
+h2 {
+    color: rgb(255, 255, 255);
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+h2::after {
+   
+    width: 70px;
+    height: 4px;
+    background: rgb(7,99,97);
+    display: block;
+    margin: 12px 0 25px;
+}
+
+p {
+    color: white;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 45px;
+}
+
+.card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        rgb(230,245,243),
+        rgb(210,235,232)
+    );
+}
+
+.card h4 {
+    color: rgb(7,99,97);
+    font-size: 1.2rem;
+    margin: 18px 20px 8px;
+}
+
+.card h5 {
+    color: #444;
+    font-size: 0.95rem;
+    font-weight: normal;
+    line-height: 1.6;
+    padding: 0 20px 25px;
+}
+
+.reveal-section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.9s ease;
+    display: flex;
+}
+
+.reveal-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+}
+        
+    </style>
+</head>
+
+<body>
+      <!--  navbar-->
+    <nav class="nav-bar n-bg">
+      <h1 class="heading"><i class="fa fa-tint"></i></h1>
+      <ul>
+        <li class="links"><a href="../index.html">HOME</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./about.html">ABOUT</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./app.html">APPLICATIONS</a>
+            <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./tech.html">TECHNIQUES</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./dev.html">LATEST DEVELOPMENTS</a>
+          <div class="underline"></div>
+        </li>
+      </ul>
+      <a href="./contact.html" class="nav-btn">CONTACT US</a>
+      <button class="bars "><i class="fa fa-bars"></i></button>
+    </nav>
+    <div class="nav-toggle">
+      <ul>
+        <li class="nt-links"><a href="../index.html">HOME</a>
+        </li>
+        <li class="nt-links"><a href="./about.html">ABOUT</a>
+        </li>
+        <li class="nt-links"><a href="./app.html">APPLICATIONS</a>
+        </li>
+        <li class="nt-links"><a href="./tech.html">TECHNIQUES</a>
+        </li>
+        <li class="nt-links"><a href="./dev.html">LATEST DEVELOPMENTS</a>
+        </li>
+      </ul>
+      <a href="./contact.html" class="nt-btn">CONTACT US</a>
+    </div>
+    <!--  navbar-->
+    <!-- applications -->
+<div class="bg-wrapper"></div>
+
+<main>
+
+
+<section class="reveal-section">
+    <div class="container" id="residential">
+
+        <div class="image-slot">
+            <img src="../assets/images/residential main.png" alt="">
+        </div>
+
+        <div class="text-slot">
+            <h2>Residential Rainwater Harvesting</h2>
+            <p>
+                Residential rainwater harvesting collects rooftop rainwater,
+                filters it and stores it for daily household use.  
+            </p>
+
+            <div class="card-wrapper">
+
+                <div class="card">
+                    <img src="../assets/images/Residential Products.png" alt="">
+                    <h4>Residential Products</h4>
+                    <h5>
+                        Gutters, filters, storage tanks and recharge pits.
+                    
+                    </h5>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/images/Residential Usage.png" alt="">
+                    <h4>Residential Usage</h4>
+                    <h5>
+                        Gardening, washing, toilet flushing and cleaning.
+                    
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="reveal-section">
+    <div class="container" id="commercial">
+
+        <div class="image-slot">
+            <img src="../assets/images/Commercial  Industrial.png" alt="">
+        </div>
+
+        <div class="text-slot">
+            <h2>Commercial & Industrial Harvesting</h2>
+            <p>
+                Designed for large buildings and industries to manage
+                high-volume rainwater efficiently.
+            </p>
+
+            <div class="card-wrapper">
+
+                <div class="card">
+                    <img src="../assets/images/Commercial Products.png" alt="">
+                    <h4>Commercial Products</h4>
+                    <h5>
+                        Underground tanks, pumps, filters and treatment units.
+                    
+                    </h5>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/images/Commercial Usage.png" alt="">
+                    <h4>Commercial Usage</h4>
+                    <h5>
+                        Cooling systems, fire safety, landscaping and reuse.
+                  
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+    <!-- applications -->
+    <!-- footer -->
+  <footer class="footer py-3">
+    <div class="container-fluid w-100 " style="height:auto;">
+      <div class="row w-100 pb-5 justify-content-evenly  flex-wrap">
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex justify-content-center flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-2 ps-5 mt-sm-3">
+          <h1 class="heading"><i class="fa fa-tint"></i></h1>
+          <h5 class=" text-white">Rainwater Harvesting</h5>
+          <div class="bg-white px-5 d-block d-sm-block d-md-none d-lg-none "
+            style="width: 60%;height: 3px;margin:0 auto"></div>
+        </div>
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex justify-content-between flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-2 pt-2 ps-sm-5 text-sm-center mt-3"
+          style="height:200px;">
+          <h4 class="text-white">Quick Links</h4>
+          <a href="../index.html" class="text-white text-decoration-none" style="font-size: 14px;">Home</a>
+          <a href="./about.html" class="text-white text-decoration-none" style="font-size: 14px;">About Us</a>
+          <a href="./dev.html" class="text-white text-decoration-none" style="font-size: 14px;">Latest Developments</a>
+          <a href="./tech.html" class="text-white text-decoration-none" style="font-size: 14px;">Techniques</a>
+        </div>
+           <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex  flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start py-2 gap-1 ps-sm-5 mt-3 justify-content-between"
+          style="height:150px;">
+          <h4 class="text-white">Applications</h4>
+          <a href="./app.html#residential" class="text-white text-decoration-none" style="font-size: 14px;">Residential Usage</a>
+          <a href="./app.html#commercial" class="text-white text-decoration-none" style="font-size: 14px;">Commercial Scale Harvesting</a>
+
+        </div>
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex py-2 flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-4 justify-content-between ps-md-5 ps-sm-5 mt-3"
+          style="height:180px;">
+          <h4 class="text-white">Contact Us</h4>
+          <a href="mailto:rainwaterharvesting@gmail.com" class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-envelope me-2"></i>   rainwaterharvesting@gmail.com</a>
+          <a href="tel:+1 (927) 764-5437" class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-phone me-2"></i>+1 (927) 764-5437</a>
+          <p class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-map-marker me-2"></i>Aptech
+                                    Garden Center</p>
+        </div>
+
+      </div>
+      <div class="bg-white px-5" style="width: 85%;height: 3px;margin:0 auto"></div>
+    </div>
+    <div class="icons w-100 pt-3   d-flex justify-content-center gap-2 align-items-center" style="height: 20%;">
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-facebook"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-dribbble"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-skype"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-instagram"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-twitter"></i></a>
+
+    </div>
+    <p class="text-white text-center mt-4 " style="font-size: 12px;">Copyright: © 2026 Rainwater Harvesting. All rights
+      reserved.</p>
+  </footer>
+  <!-- footer -->
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+ <script src="../assets/jquery/jquery-3.7.1.js"></script>
+  <script>
+        $(document).ready(function() {
+$(".bars").click(function(){
+    $(".nav-toggle").toggle();
+})    
+    
+});
+  document.addEventListener("DOMContentLoaded", function () {
+
+
+    let sections = document.querySelectorAll(".reveal-section");
+
+
+    let observer = new IntersectionObserver(function (entries) {
+
+
+        for (let i = 0; i < entries.length; i++) {
+
+            if (entries[i].isIntersecting) {
+                entries[i].target.classList.add("active");
+            }
+        }
+
+    }, {
+        threshold: 0.3
+    });
+
+
+    for (let i = 0; i < sections.length; i++) {
+        observer.observe(sections[i]);
+    }
+
+});
+
+    </script>
+
+</body>
+</html>

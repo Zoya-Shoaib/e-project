@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="../assets/bootstrap/bootstrap.min.css"rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <style>
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #0f172a;
+        }
+        .material-symbols-outlined {
+            vertical-align: middle;
+        }
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #26636B;
+            transition: all 0.3s ease;
+        }
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .contact-item:hover .icon-box {
+            background-color: #26636B;
+            color: white;
+        }
+        .contact-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+        .contact-card {
+           box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.1);
+            border-radius: 40px;
+            padding: 48px;
+            border: 1px solid #f8fafc;
+        }
+        .btn-teal {
+            background-color: #26636B;
+            color: white;
+            font-weight: 600;
+            padding: 13px 40px;
+            border-radius: 12px;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-teal:hover {
+            background-color: #1d4d54;
+            color: white;
+        }
+        .form-control, .form-select {
+            background-color: #f8fafc;
+            border: 1px solid #f1f5f9;
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+        .form-control:focus {
+            border-color: #26636B;
+            box-shadow: 0 0 0 4px rgba(38, 99, 107, 0.1);
+        }
+        .map-container {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            background-color: #e2e8f0;
+            height: 300px;
+            cursor: pointer;
+        }
+        .map-grayscale {
+            width: 100%;
+            height: 100%;
+        }
+        .label-caps {
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+        }
+        
+    </style>
+</head>
+
+<body>
+      <!--  navbar-->
+    <nav class="nav-bar n-bg">
+      <h1 class="heading"><i class="fa fa-tint"></i></h1>
+      <ul>
+        <li class="links"><a href="../index.html">HOME</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./about.html">ABOUT</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./app.html">APPLICATIONS</a>
+            <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./tech.html">TECHNIQUES</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./dev.html">LATEST DEVELOPMENTS</a>
+          <div class="underline"></div>
+        </li>
+      </ul>
+      <a href="./contact.html" class="nav-btn">CONTACT US</a>
+      <button class="bars "><i class="fa fa-bars"></i></button>
+    </nav>
+    <div class="nav-toggle">
+      <ul>
+        <li class="nt-links"><a href="../index.html">HOME</a>
+        </li>
+        <li class="nt-links"><a href="./about.html">ABOUT</a>
+        </li>
+        <li class="nt-links"><a href="./app.html">APPLICATIONS</a>
+        </li>
+        <li class="nt-links"><a href="./tech.html">TECHNIQUES</a>
+        </li>
+        <li class="nt-links"><a href="./dev.html">LATEST DEVELOPMENTS</a>
+        </li>
+      </ul>
+      <a href="./contact.html" class="nt-btn">CONTACT US</a>
+    </div>
+    <!--  navbar-->
+      <!-- contact -->
+        <input type="hidden" name="latitude" id="lat">
+        <input type="hidden" name="longitude" id="lon">
+
+        <main class="container pt-5 my-5 my-sm-5 my-md-5 ">
+            <div class="text-center mb-5 pb-4">
+                <h1 class="display-4 fw-semibold">Contact Us</h1>
+            </div>
+
+            <div class="row">
+                <div class="mb-5 col-12 col-md-6">
+                    <h2 class="h4 fw-semibold mb-5">Reach out directly</h2>
+
+                     <div class="d-flex flex-column gap-4 mb-5">
+                        <div class="contact-item">
+                            <div class="icon-box">
+                                <span
+                                    class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div class="mb-3 ps-2">
+                                <p class="label-caps mb-1">Email Us</p>
+                                <a href="mailto:rainwaterharvesting@gmail.com"
+                                    class="text-decoration-none fw-medium text-dark">
+                                    rainwaterharvesting@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-box">
+                                <span
+                                    class="material-symbols-outlined">call</span>
+                            </div>
+                            <div class="mb-3 ps-2">
+                                <p class="label-caps mb-1">Call Us</p>
+                             
+                                    <a href="tel:+1 (927) 764-5437" class="mb-0 fw-medium text-dark text-decoration-none"style="font-size: 14px;">+1 (927) 764-5437</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon-box">
+                                <span
+                                    class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div class="mb-3 ps-2">
+                                <p class="label-caps mb-1">Visit Us</p>
+                                <p class="mb-0 fw-medium text-dark">Aptech
+                                    Garden Center</p>
+                            </div>
+                        </div>
+                        <div class="mb-5 mb-sm-0 mb-md-0 mb-lg-0 ">
+                            <div class="map-container " >
+                                <iframe id="user-map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM!5e0!3m2!1sen!2s!4v1"
+                                    style="height: 100%; border:3px solid #26636B; width: 100%; border-radius: 30px;"
+                                    allowfullscreen loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-5 mb-sm-0 mb-md-0 mb-lg-0">
+                    <div class="contact-card bg-white " style="height: auto;border:3px solid rgb(7,99,97)">
+                        <div class="mb-4">
+                            <h2 class="fw-semibold mb-2">Send us a message</h2>
+                            <p class="text-muted" style="font-size: 14px;">We usually respond within 24
+                                business hours.</p>
+                        </div>
+
+                        <form action="https://api.web3forms.com/submit"
+                            method="POST">
+                            <input type="hidden" name="access_key"
+                                value="62e49d41-498e-4471-ba0c-565866040111">
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="label-caps mb-2 d-block"
+                                        for="name">Full Name</label>
+                                    <input type="text" class="form-control"
+                                        id="name" name="name"
+                                        placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="label-caps mb-2 d-block"
+                                        for="email">Email Address</label>
+                                    <input type="email" class="form-control"
+                                        id="email" name="email"
+                                        placeholder="Enter your email" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="label-caps mb-2 d-block"
+                                    for="subject">Project Type</label>
+                                <select class="form-select" id="subject"
+                                    name="subject">
+                                    <option value="residential">General
+                                        Inquiry</option>
+                                    <option value="commercial">Commercial Rainwater
+                                        Harvesting</option>
+                                    <option value="agriculture">Agriculture
+                                        Solutions</option>
+                                    <option value="maintenance">Maintenance &
+                                        Servicing</option>
+                                    <option value="general">Residental Rainwater
+                                        Harvesting</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="label-caps mb-2 d-block"
+                                    for="message">Your Message</label>
+                                <textarea class="form-control" id="message"
+                                    name="message" rows="7"
+                                    placeholder="Tell us how we can help you..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="btn btn-teal w-100 w-md-auto mt-3">
+                                Send Message <span
+                                    class="material-symbols-outlined fs-6 ms-2">send</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+      <!-- contact -->
+  <!-- footer -->
+  <footer class="footer py-3">
+    <div class="container-fluid w-100 " style="height:auto;">
+      <div class="row w-100 pb-5 justify-content-evenly  flex-wrap">
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex justify-content-center flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-2 ps-5 mt-sm-3">
+          <h1 class="heading"><i class="fa fa-tint"></i></h1>
+          <h5 class=" text-white">Rainwater Harvesting</h5>
+          <div class="bg-white px-5 d-block d-sm-block d-md-none d-lg-none "
+            style="width: 60%;height: 3px;margin:0 auto"></div>
+        </div>
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex justify-content-between flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-2 pt-2 ps-sm-5 text-sm-center mt-3"
+          style="height:200px;">
+          <h4 class="text-white">Quick Links</h4>
+          <a href="../index.html" class="text-white text-decoration-none" style="font-size: 14px;">Home</a>
+          <a href="./about.html" class="text-white text-decoration-none" style="font-size: 14px;">About Us</a>
+          <a href="./dev.html" class="text-white text-decoration-none" style="font-size: 14px;">Latest Developments</a>
+          <a href="./tech.html" class="text-white text-decoration-none" style="font-size: 14px;">Techniques</a>
+        </div>
+           <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex  flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start py-2 gap-1 ps-sm-5 mt-3 justify-content-between"
+          style="height:150px;">
+          <h4 class="text-white">Applications</h4>
+          <a href="./app.html#residential" class="text-white text-decoration-none" style="font-size: 14px;">Residential Usage</a>
+          <a href="./app.html#commercial" class="text-white text-decoration-none" style="font-size: 14px;">Commercial Scale Harvesting</a>
+
+        </div>
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex py-2 flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-4 justify-content-between ps-md-5 ps-sm-5 mt-3"
+          style="height:180px;">
+          <h4 class="text-white">Contact Us</h4>
+          <a href="mailto:rainwaterharvesting@gmail.com" class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-envelope me-2"></i>   rainwaterharvesting@gmail.com</a>
+          <a href="tel:+1 (927) 764-5437" class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-phone me-2"></i>+1 (927) 764-5437</a>
+          <p class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-map-marker me-2"></i>Aptech
+                                    Garden Center</p>
+        </div>
+
+      </div>
+      <div class="bg-white px-5" style="width: 85%;height: 3px;margin:0 auto"></div>
+    </div>
+    <div class="icons w-100 pt-3   d-flex justify-content-center gap-2 align-items-center" style="height: 20%;">
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-facebook"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-dribbble"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-skype"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-instagram"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-twitter"></i></a>
+
+    </div>
+    <p class="text-white text-center mt-4 " style="font-size: 12px;">Copyright: © 2026 Rainwater Harvesting. All rights
+      reserved.</p>
+  </footer>
+  <!-- footer -->
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+ <script src="../assets/jquery/jquery-3.7.1.js"></script>
+  <script>
+        $(document).ready(function() {
+$(".bars").click(function(){
+    $(".nav-toggle").toggle();
+})    
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        if(document.getElementById("lat")) document.getElementById("lat").value = lat;
+        if(document.getElementById("lon")) document.getElementById("lon").value = lon;
+        const newMapUrl = `https://www.google.com/maps/embed/v1/view?key=YOUR_API_KEY&center=${lat},${lon}&zoom=15`;  
+        const simpleMapUrl = `https://maps.google.com/maps?q=${lat},${lon}&z=15&output=embed`;
+        
+        document.getElementById("user-map").src = simpleMapUrl;
+        
+    }, function(error) {
+        console.error("Error getting location: ", error);
+    });
+}
+    
+});
+
+    </script>
+
+</body>
+</html>

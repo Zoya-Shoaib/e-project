@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  <style>
+        :root { --primary-teal: rgb(7,99,97); --bg-gray: #f8fafc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-gray); color: #1e293b; overflow-x: hidden; }
+        
+        .header-section { text-align: center; padding: 90px 0 60px; }
+        .text-teal { color: var(--primary-teal) !important; }
+        .btn-teal { background-color: var(--primary-teal); color: white; border: none; padding: 12px 35px; border-radius: 10px; font-weight: 600; transition: 0.3s; }
+        .btn-teal:hover { background-color: #0b7a6f; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(13, 148, 136, 0.2); color: white; }
+
+        /* Main Page - Images Always Right */
+        .img-card { border-radius: 24px; overflow: hidden; height: 400px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .img-card img { width: 100%; height: 100%; object-fit: cover; }
+        .section-spacer { margin-bottom: 120px; }
+
+        /* Premium Modal Design (Image Left, Content Right) */
+        .modal-content { border-radius: 28px; overflow: hidden; border: none; }
+        .modal-body { padding: 0 !important; }
+        .modal-split-img { height: 100%; min-height: 600px; object-fit: cover; }
+        
+        .content-side { padding: 50px; background: white; position: relative; }
+        .badge-tech { background: #f1f5f9; color: rgb(7,99,97); font-size: 11px; font-weight: 500; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; margin-right: 8px; }
+        
+        .stat-box { border: 1px solid rgb(7,99,97); border-radius: 16px; padding: 18px; text-align: center; flex: 1; }
+        .stat-val { display: block; font-weight: 500; font-size: 1.4rem; color: #0f172a; }
+        .stat-label { font-size: 10px; text-transform: uppercase; color: rgb(7,99,97); font-weight: 700; letter-spacing: 0.5px; }
+
+        .close-btn-custom { position: absolute; top: 25px; right: 25px; background: none; border: none; font-size: 28px; color: #94a3b8; cursor: pointer; z-index: 10; line-height: 1; }
+        .close-btn-custom:hover { color: #0f172a; }
+    </style>
+</head>
+<body>
+    <!--  navbar-->
+    <nav class="nav-bar n-bg">
+      <h1 class="heading"><i class="fa fa-tint"></i></h1>
+      <ul>
+        <li class="links"><a href="../index.html">HOME</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./about.html">ABOUT</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./app.html">APPLICATIONS</a>
+            <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./tech.html">TECHNIQUES</a>
+          <div class="underline"></div>
+        </li>
+        <li class="links"><a href="./dev.html">LATEST DEVELOPMENTS</a>
+          <div class="underline"></div>
+        </li>
+      </ul>
+      <a href="./contact.html" class="nav-btn">CONTACT US</a>
+      <button class="bars "><i class="fa fa-bars"></i></button>
+    </nav>
+    <div class="nav-toggle">
+      <ul>
+        <li class="nt-links"><a href="../index.html">HOME</a>
+        </li>
+        <li class="nt-links"><a href="./about.html">ABOUT</a>
+        </li>
+        <li class="nt-links"><a href="./app.html">APPLICATIONS</a>
+        </li>
+        <li class="nt-links"><a href="./tech.html">TECHNIQUES</a>
+        </li>
+        <li class="nt-links"><a href="./dev.html">LATEST DEVELOPMENTS</a>
+        </li>
+      </ul>
+      <a href="./contact.html" class="nt-btn">CONTACT US</a>
+    </div>
+    <!--  navbar-->
+      <header class="container header-section " style="margin-top:40px;">
+    <h1 class="display-5  mb-4" style="font-weight: 600;">Latest Developments</h1>
+    <p class="  mx-auto" style="max-width: 800px;font-size: 16px;color:rgb(7,99,97)">A Step By Step technical mystery guide from atmospheric harvest to architectural distribution. Discover our latest breakthrough in water autonomy </p>
+</header>
+
+<main class="container">
+    <section class="row align-items-center section-spacer">
+        <div class="col-md-6">
+            <h3 class="fw-semi-bold h2 mb-3">Super-Hydrophobic Harvesting</h3>
+            <p class="text-muted mb-4">Implementing biomimetic nanocoatings to maximize water collection and eliminate surface absorption losses in arid climates.</p>
+            <button class="btn btn-teal shadow-sm" data-bs-toggle="modal" data-bs-target="#modal1">Read More</button>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="img-card" style="border:4px solid rgb(7,99,97)"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYK6atDxtnpdlkdp4Ihpu0T413VI1wM48IYBtUnAfyRyiXC7bOLcZsqjb2a7DKmjoZhMw3IDVajff6vvvSBu98V2FN3kPMBQc6BF0a-XcPuz91k6_SX_hr3Rsk40d73UEFr1RQ-rJGphZJ9b3kB5xoDPj4-v2Rykhs1fWIJlahr0K1LTiRfx2IID5UYmaXpDGJvD54GZ_7MHirx5YYobCTOLqaFLQve_yw5DIUyb6pS0nrsSnckZFhaaJMQ0kaGpdsBKuYbmmX0oqf" alt="Water Harvesting"></div>
+        </div>
+    </section>
+
+    <section class="row align-items-center section-spacer">
+        <div class="col-md-6">
+            <h3 class="fw-semi-bold h2 mb-3">Advanced UV-C & Ozone Sterilization</h3>
+            <p class="text-muted mb-4">A high-tech, chemical-free purification system that ensures pharmaceutical-grade water safety for sensitive ecosystems.</p>
+            <button class="btn btn-teal shadow-sm" data-bs-toggle="modal" data-bs-target="#modal2">Read More</button>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="img-card" style="border:4px solid rgb(7,99,97)"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA71J0o-Jw5l0Xt5HGBVTVs0NB53X0RmbHwakA0R5Jbc3u46hxtDdkNAo6B8iiVRcofHCeUVAw9LQDaOrWyJa_djN-L6f2A2frmZ2Z3tLwDB_kS_kXZuvXR5v-zTEslIh7LVw32qSAhQqrAR0vwuk2gyyTs7fxr7aYoYbxEGC4WO9P4k_H32G25oGbJ1EgW34u1AGXEeDWE7LSuQrbutSy9oY3iteRKbwXvwtNQS0JhtNc2TJH2T8n7SgzOsrCzbnlkNjJZyD8LbuZp" alt="Sterilization Tech"></div>
+        </div>
+    </section>
+
+    <section class="row align-items-center section-spacer">
+        <div class="col-md-6">
+            <h3 class="fw-semi-bold h2 mb-3">IOT Predictive Distribution</h3>
+            <p class="text-muted mb-4">Precision irrigation managed by cloud-connected AI sensors to eliminate water waste and optimize soil hydration.</p>
+            <button class="btn btn-teal shadow-sm" data-bs-toggle="modal" data-bs-target="#modal3">Read More</button>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="img-card" style="border:4px solid rgb(7,99,97)"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0ckAztDDfYb_0-vymdYlfrLH7CGZLA48yuUcCX5tqNTqEC8tUXYwAZMfQmJSlRWmC25PY1NftLCT5T8kQB_WcQhaQYDfhMCZAi2VWkXbkeHdx8vWXeM_79IKxwBoIA04AUi9jiefZoKE9g15QhxFdzMnuZ1SsboLcmio-DPCXE292jo3SLy7AVJ4E0P5DrtXEv_GcJdxVGVYqpBMnc4PatjhB51o5OhLA-LIZsu-HHms-NlSx4rFCeH2bCfzdfXRPjLj_LYJhIXrK" alt="IOT Systems"></div>
+        </div>
+    </section>
+
+    <section class="row align-items-center section-spacer">
+        <div class="col-md-6">
+            <h3 class="fw-semi-bold h2 mb-3">Photovoltaic Energy Coupling</h3>
+            <p class="text-muted mb-4">Self-sustaining bi-facial solar tracking networks providing 24/7 off-grid power for critical environmental operations.</p>
+            <button class="btn btn-teal shadow-sm" data-bs-toggle="modal" data-bs-target="#modal4">Read More</button>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="img-card" style="border:4px solid rgb(7,99,97)"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjcXH_PzC5iE7Wzm02dR0Gj53yWZgucSSeuGmNVCZ700pSxK3_DZV7bGekUyUr0FQEraW4QS058Xp94RQ-6T_esLVr-U0hYgMxwhEJpt_lPFqCY2k07D1KVr_AFbdTDZo29_weeUaUfeQC77dsokeMXtH1KUjkWCUOtPWEfd9j7kIAZi_p6P_-Qi1G4m6E0zszmCDe9ORduVLrMLpsigz5htiOhYkm14aRnUej81gMVzb4g_RensJpK5Dp8mLQinmQc2xp08lhh9fr" alt="Solar Energy"></div>
+        </div>
+    </section>
+
+    <section class="row align-items-center section-spacer">
+        <div class="col-md-6">
+            <h3 class="fw-semi-bold h2 mb-3">Modular Subterranean Reservoirs</h3>
+            <p class="text-muted mb-4">Smart underground storage units designed to eliminate evaporation and maintain thermal stability for long-term supply.</p>
+            <button class="btn btn-teal shadow-sm" data-bs-toggle="modal" data-bs-target="#modal5">Read More</button>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="img-card" style="border:4px solid rgb(7,99,97)"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1p0NMx2VWVvy97mvgJm4pJ1bpapfxsYVg_3NncIvDevAkmGZXa62y_nklP8XRchsdBE6Qo9ZbQeLeM1xDUdP4bEc6NLAZ6gBit_4AvYbc-99y6ahRrRccWk6y7wJDWMDr0Pbe3hQcABHcNm3EVLoSapQnUAncu_5FGvmZMpgXulGPgjI9uxJw7sxVBzj628r78CmGZPxcdwhP5qF3bC6UTSOm8SuSCVv6pur2sLKARukTlL4nNPU3WqzryIM88c2Ar4MH-qAtfaMp" alt="Reservoirs"></div>
+        </div>
+    </section>
+
+    <section class="row align-items-center section-spacer">
+        <div class="col-md-6">
+            <h3 class="fw-semi-bold h2 mb-3">Regenerative Landscape</h3>
+            <p class="text-muted mb-4">Restoring natural biodiversity through engineered topsoil health and sustainable resource management cycles.</p>
+            <button class="btn btn-teal shadow-sm" data-bs-toggle="modal" data-bs-target="#modal6">Read More</button>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="img-card" style="border:4px solid rgb(7,99,97)"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABYRuDdzq1-EArRyWfY6yKWEIr8RMc-0HJbxcDFncON8WT0LK7qR0lb83UHtlpkEEPYYJD4SsiWiHcLXWCMpXmsfIrV2PbdUobKELyikS9YyT7iE2YhcMEGIS705U3Ddt2TIcBgJwfeTxmgPv6Q4TKFxr6Ne8tmzFXFiVNcj4uAKNAYhP8mzN-7pOAN2B1iyFMwFVNc2NptkBQhDO3tZveegt6FNurUZgHkcfLAgJnVQnpEhzg6xH2VZFy6VhrBNHfvaddur7xz5vo" alt="Regenerative Tech"></div>
+        </div>
+    </section>
+</main>
+
+<div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content shadow-lg"  style="border:4px solid rgb(7,99,97)">
+            <button type="button" class="close-btn-custom" data-bs-dismiss="modal">×</button>
+            <div class="modal-body">
+                <div class="row g-0">
+                    <div class="col-md-5" ><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYK6atDxtnpdlkdp4Ihpu0T413VI1wM48IYBtUnAfyRyiXC7bOLcZsqjb2a7DKmjoZhMw3IDVajff6vvvSBu98V2FN3kPMBQc6BF0a-XcPuz91k6_SX_hr3Rsk40d73UEFr1RQ-rJGphZJ9b3kB5xoDPj4-v2Rykhs1fWIJlahr0K1LTiRfx2IID5UYmaXpDGJvD54GZ_7MHirx5YYobCTOLqaFLQve_yw5DIUyb6pS0nrsSnckZFhaaJMQ0kaGpdsBKuYbmmX0oqf" class="modal-split-img w-100"></div>
+                    <div class="col-md-7 content-side">
+                        <div class="mb-3"><span class="badge-tech">Nanotech</span><span class="badge-tech">Active R&D</span></div>
+                        <h2 class="fw-semi-bold mb-4">Super-Hydrophobic Harvesting</h2>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="stat-box"><span class="stat-label">Efficiency</span><span class="stat-val">98.2%</span></div>
+                            <div class="stat-box"><span class="stat-label">Durability</span><span class="stat-val">15yr+</span></div>
+                        </div>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color: rgb(7,99,97);">Technology Overview</h6>
+                        <p class="text-muted">Our harvesting surfaces utilize advanced biomimetic coatings inspired by the Lotus Effect. This nanotechnology creates a high contact angle for water droplets, ensuring they flow instantly into collection channels without any absorption or evaporation losses.</p>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color: rgb(7,99,97);">Sustainable Impact</h6>
+                        <p class="text-muted">In arid regions, this system captures up to 45% more moisture compared to traditional methods. The self-cleaning properties prevent dust accumulation, maintaining peak performance year-round with zero maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content shadow-lg"  style="border:4px solid rgb(7,99,97)">
+            <button type="button" class="close-btn-custom" data-bs-dismiss="modal">×</button>
+            <div class="modal-body">
+                <div class="row g-0">
+                    <div class="col-md-5" ><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA71J0o-Jw5l0Xt5HGBVTVs0NB53X0RmbHwakA0R5Jbc3u46hxtDdkNAo6B8iiVRcofHCeUVAw9LQDaOrWyJa_djN-L6f2A2frmZ2Z3tLwDB_kS_kXZuvXR5v-zTEslIh7LVw32qSAhQqrAR0vwuk2gyyTs7fxr7aYoYbxEGC4WO9P4k_H32G25oGbJ1EgW34u1AGXEeDWE7LSuQrbutSy9oY3iteRKbwXvwtNQS0JhtNc2TJH2T8n7SgzOsrCzbnlkNjJZyD8LbuZp" class="modal-split-img w-100"></div>
+                    <div class="col-md-7 content-side">
+                        <div class="mb-3"><span class="badge-tech">Bio-Safety</span><span class="badge-tech">Chemical-Free</span></div>
+                        <h2 class="fw-semi-bold mb-4">UV-C & Ozone Sterilization</h2>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="stat-box"><span class="stat-label">Sterilization</span><span class="stat-val">99.9%</span></div>
+                            <div class="stat-box"><span class="stat-label">Chemicals</span><span class="stat-val">0%</span></div>
+                        </div>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color: rgb(7,99,97);">How it Works</h6>
+                        <p class="text-muted">This dual-stage system employs high-intensity UV-C radiation to disrupt the DNA of pathogens, followed by Ozone injection for deep oxidation. It effectively neutralizes viruses and bacteria without altering the water’s natural pH or mineral balance.</p>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color: rgb(7,99,97);">Environmental Benefit</h6>
+                        <p class="text-muted">By eliminating the need for chlorine or salts, we protect the soil’s microbial health, ensuring that the water provided to crops promotes natural growth and long-term land fertility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content shadow-lg"  style="border:4px solid rgb(7,99,97)">
+            <button type="button" class="close-btn-custom" data-bs-dismiss="modal">×</button>
+            <div class="modal-body">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0ckAztDDfYb_0-vymdYlfrLH7CGZLA48yuUcCX5tqNTqEC8tUXYwAZMfQmJSlRWmC25PY1NftLCT5T8kQB_WcQhaQYDfhMCZAi2VWkXbkeHdx8vWXeM_79IKxwBoIA04AUi9jiefZoKE9g15QhxFdzMnuZ1SsboLcmio-DPCXE292jo3SLy7AVJ4E0P5DrtXEv_GcJdxVGVYqpBMnc4PatjhB51o5OhLA-LIZsu-HHms-NlSx4rFCeH2bCfzdfXRPjLj_LYJhIXrK" class="modal-split-img w-100"></div>
+                    <div class="col-md-7 content-side">
+                        <div class="mb-3"><span class="badge-tech">IOT</span><span class="badge-tech">AI Driven</span></div>
+                        <h2 class="fw-semi-bold mb-4">IOT Predictive Distribution</h2>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="stat-box"><span class="stat-label">Automation</span><span class="stat-val">100%</span></div>
+                            <div class="stat-box"><span class="stat-label">Sensors</span><span class="stat-val">Active</span></div>
+                        </div>
+                        <h6 class="text-uppercase fw-semi-bold  small mb-2" style="color:rgb(7,99,97)">Smart Management</h6>
+                        <p class="text-muted">A network of mesh-connected soil sensors monitors moisture levels in real-time. This data is processed by an AI gateway that cross-references local weather forecasts to automate water distribution with surgical precision.</p>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color:rgb(7,99,97)">Predictive Logic</h6>
+                        <p class="text-muted">The system can predict rainfall events and adjust irrigation schedules accordingly, ensuring zero water wastage and optimal hydration for diverse plant species across the landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal4" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content shadow-lg"  style="border:4px solid rgb(7,99,97)">
+            <button type="button" class="close-btn-custom" data-bs-dismiss="modal">×</button>
+            <div class="modal-body">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjcXH_PzC5iE7Wzm02dR0Gj53yWZgucSSeuGmNVCZ700pSxK3_DZV7bGekUyUr0FQEraW4QS058Xp94RQ-6T_esLVr-U0hYgMxwhEJpt_lPFqCY2k07D1KVr_AFbdTDZo29_weeUaUfeQC77dsokeMXtH1KUjkWCUOtPWEfd9j7kIAZi_p6P_-Qi1G4m6E0zszmCDe9ORduVLrMLpsigz5htiOhYkm14aRnUej81gMVzb4g_RensJpK5Dp8mLQinmQc2xp08lhh9fr" class="modal-split-img w-100"></div>
+                    <div class="col-md-7 content-side">
+                        <div class="mb-3"><span class="badge-tech">Energy</span><span class="badge-tech">Off-Grid</span></div>
+                        <h2 class="fw-semi-bold mb-4">Photovoltaic Energy Coupling</h2>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="stat-box"><span class="stat-label">Solar Gain</span><span class="stat-val">+30%</span></div>
+                            <div class="stat-box"><span class="stat-label">Battery Life</span><span class="stat-val">Long</span></div>
+                        </div>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color: rgb(7,99,97);">Energy Strategy</h6>
+                        <p class="text-muted">Our off-grid energy network utilizes bi-facial solar modules that capture sunlight from both sides. Integrated tracking systems maximize exposure, providing a steady power supply to desalination pumps and distribution hubs.</p>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color: rgb(7,99,97);">Resilience</h6>
+                        <p class="text-muted">Advanced solid-state battery storage ensures the entire infrastructure remains operational 24/7, even during periods of low sunlight, making the project completely independent of the national power grid.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal5" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content shadow-lg" style="border:4px solid rgb(7,99,97)">
+            <button type="button" class="close-btn-custom" data-bs-dismiss="modal">×</button>
+            <div class="modal-body">
+                <div class="row g-0">
+                    <div class="col-md-5" ><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1p0NMx2VWVvy97mvgJm4pJ1bpapfxsYVg_3NncIvDevAkmGZXa62y_nklP8XRchsdBE6Qo9ZbQeLeM1xDUdP4bEc6NLAZ6gBit_4AvYbc-99y6ahRrRccWk6y7wJDWMDr0Pbe3hQcABHcNm3EVLoSapQnUAncu_5FGvmZMpgXulGPgjI9uxJw7sxVBzj628r78CmGZPxcdwhP5qF3bC6UTSOm8SuSCVv6pur2sLKARukTlL4nNPU3WqzryIM88c2Ar4MH-qAtfaMp" class="modal-split-img w-100"></div>
+                    <div class="col-md-7 content-side">
+                        <div class="mb-3"><span class="badge-tech">Storage</span><span class="badge-tech">Eco-Logic</span></div>
+                        <h2 class="fw-semi-bold mb-4">Subterranean Reservoirs</h2>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="stat-box"><span class="stat-label">Evaporation</span><span class="stat-val">0%</span></div>
+                            <div class="stat-box"><span class="stat-label">Stability</span><span class="stat-val">High</span></div>
+                        </div>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color:rgb(7,99,97)">Deep Storage Design</h6>
+                        <p class="text-muted">By utilizing high-capacity underground chambers, we eliminate evaporation losses caused by surface exposure. These reservoirs maintain a stable, cool temperature that prevents algae growth and mineral degradation.</p>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color:rgb(7,99,97)">Land Use Efficiency</h6>
+                        <p class="text-muted">By utilizing high-capacity underground chambers, we eliminate evaporation losses caused by surface exposure. These reservoirs maintain a stable, cool temperature that prevents algae growth and mineral degradation.</p>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color:rgb(7,99,97)">Land Use Efficiency</h6>
+                        <p class="text-muted">The modular design allows for vertical expansion without disturbing the surface landscape. This subterranean approach leaves the topsoil free for agricultural use while securing a reliable year-round water supply.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal6" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered" >
+        <div class="modal-content shadow-lg" style="border:4px solid rgb(7,99,97)">
+            <button type="button" class="close-btn-custom" data-bs-dismiss="modal">×</button>
+            <div class="modal-body">
+                <div class="row g-0">
+                    <div class="col-md-5"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABYRuDdzq1-EArRyWfY6yKWEIr8RMc-0HJbxcDFncON8WT0LK7qR0lb83UHtlpkEEPYYJD4SsiWiHcLXWCMpXmsfIrV2PbdUobKELyikS9YyT7iE2YhcMEGIS705U3Ddt2TIcBgJwfeTxmgPv6Q4TKFxr6Ne8tmzFXFiVNcj4uAKNAYhP8mzN-7pOAN2B1iyFMwFVNc2NptkBQhDO3tZveegt6FNurUZgHkcfLAgJnVQnpEhzg6xH2VZFy6VhrBNHfvaddur7xz5vo" class="modal-split-img w-100"></div>
+                    <div class="col-md-7 content-side">
+                        <div class="mb-3"><span class="badge-tech">Ecology</span><span class="badge-tech">Regenerative</span></div>
+                        <h2 class="fw-semi-bold mb-4">Regenerative Landscape</h2>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="stat-box"><span class="stat-label">Topsoil Health</span><span class="stat-val">+200%</span></div>
+                            <div class="stat-box"><span class="stat-label">Biodiversity</span><span class="stat-val">Rich</span></div>
+                        </div>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color:rgb(7,99,97)">Holistic Restoration</h6>
+                        <p class="text-muted">The final stage of our system transforms barren land into a self-sustaining ecosystem. By restoring the natural water cycle and enhancing topsoil organic matter, we create an environment where local flora and fauna can thrive once more.</p>
+                        <h6 class="text-uppercase fw-semi-bold small mb-2" style="color:rgb(7,99,97)">Carbon Sequestration</h6>
+                        <p class="text-muted">This regenerative approach acts as a powerful carbon sink, sequestering atmospheric CO2 into the soil and biomass, directly contributing to global climate goals while restoring local economic productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+       <!-- footer -->
+  <footer class="footer py-3">
+    <div class="container-fluid w-100 " style="height:auto;">
+      <div class="row w-100 pb-5 justify-content-evenly  flex-wrap">
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex justify-content-center flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-2 ps-5 mt-sm-3">
+          <h1 class="heading"><i class="fa fa-tint"></i></h1>
+          <h5 class=" text-white">Rainwater Harvesting</h5>
+          <div class="bg-white px-5 d-block d-sm-block d-md-none d-lg-none "
+            style="width: 60%;height: 3px;margin:0 auto"></div>
+        </div>
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex justify-content-between flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-2 pt-2 ps-sm-5 text-sm-center mt-3"
+          style="height:200px;">
+          <h4 class="text-white">Quick Links</h4>
+          <a href="../index.html" class="text-white text-decoration-none" style="font-size: 14px;">Home</a>
+          <a href="./about.html" class="text-white text-decoration-none" style="font-size: 14px;">About Us</a>
+          <a href="./dev.html" class="text-white text-decoration-none" style="font-size: 14px;">Latest Developments</a>
+          <a href="./tech.html" class="text-white text-decoration-none" style="font-size: 14px;">Techniques</a>
+        </div>
+          <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex  flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start py-2 gap-1 ps-sm-5 mt-3 justify-content-between"
+          style="height:150px;">
+          <h4 class="text-white">Applications</h4>
+          <a href="./app.html#residential" class="text-white text-decoration-none" style="font-size: 14px;">Residential Usage</a>
+          <a href="./app.html#commercial" class="text-white text-decoration-none" style="font-size: 14px;">Commercial Scale Harvesting</a>
+
+        </div>
+        <div
+          class="col-11 col-sm-11 col-md-5 col-lg-3  d-flex py-2 flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-start gap-4 justify-content-between ps-md-5 ps-sm-5 mt-3"
+          style="height:180px;">
+          <h4 class="text-white">Contact Us</h4>
+          <a href="mailto:rainwaterharvesting@gmail.com" class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-envelope me-2"></i>   rainwaterharvesting@gmail.com</a>
+          <a href="tel:+1 (927) 764-5437" class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-phone me-2"></i>+1 (927) 764-5437</a>
+          <p class="text-white text-decoration-none" style="font-size: 14px;"><i class="fa fa-map-marker me-2"></i>Aptech
+                                    Garden Center</p>
+        </div>
+
+      </div>
+      <div class="bg-white px-5" style="width: 85%;height: 3px;margin:0 auto"></div>
+    </div>
+    <div class="icons w-100 pt-3   d-flex justify-content-center gap-2 align-items-center" style="height: 20%;">
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-facebook"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-dribbble"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-skype"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-instagram"></i></a>
+      <a href="#"
+        class="rounded-circle px-3 py-2 bg-transparent border border-2 border-white text-decoration-none text-white "
+        style="font-size:13px"><i class="fa fa-twitter"></i></a>
+
+    </div>
+    <p class="text-white text-center mt-4 " style="font-size: 12px;">Copyright: © 2026 Rainwater Harvesting. All rights
+      reserved.</p>
+  </footer>
+  <!-- footer -->
+    <script src="../assets/jquery/jquery-3.7.1.js"></script>
+    <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+$(".bars").click(function(){
+    $(".nav-toggle").toggle();
+    // alert("hello")
+})    
+    
+});
+
+    </script>
+</body>
+</html>
